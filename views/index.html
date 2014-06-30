@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Task Management</title>
+    <link rel="stylesheet" href="lib.min.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <script src="lib.min.js"></script>
+    <script src="all.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default startbootstrap-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Task Management</a>
+        </div>
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" >
+                <li class=''><a href="#"> Home</a></li>
+                <li><a href="create_task.html"> Create Task </a></li>
+            </ul>
+        </div>
+
+    </div><!-- /.container -->
+</nav>
+<section id="page-wrapper" >
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-lg-offset-2">
+            <div class="input-group">
+                <input id="search"  type='text' class="form-control " placeholder="search based on summary or description"/>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center"> List of Tasks </h3>
+                </div>
+                <div class="panel-body" id="panel">
+                    <div class="col-lg-11 col-lg-offset-1 ">
+                        <script type="text/x-handlebars-template" id ='list-template'>
+                            <!--<ul class="list-group" id="taskList">-->
+                                <!--{{#if .}}-->
+                                    <!--{{#each .}}-->
+                                    <!--<li class="list-group-item" id="{{id}}"><a href="update_task.html"> {{summary}}</a><span class="badge">{{priority}}</span></li>-->
+                                    <!--{{/each}}-->
+                                <!--{{else}}-->
+                                    <!--<li class="list-group-item"> At moment, No tasks available.</li>-->
+                                <!--{{/if}}-->
+                            <!--</ul>-->
+                            <div class="list-group" id="taskList">
+                                {{#if .}}
+                                {{#each .}}
+                                <a href="update_task.html" class="list-group-item" id="{{id}}"><h4 class="list-group-item-heading">{{summary}}<span class="badge pull-right">{{priority}}</span></h4><p class="list-group-item-text ">{{description}}</p></a>
+                                {{/each}}
+                                {{else}}
+                                <a class="list-group-item"> At moment, No tasks available.</a>
+                                {{/if}}
+                            </div>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+<!--<footer>-->
+    <!--<div class="container">-->
+        <!--<p class="copyright text-center ">-->
+            <!--Copyright &#169; 2014 All Rights Reserved by <strong>Technoidentity.com</strong>-->
+        <!--</p>-->
+    <!--</div>-->
+<!--</footer>-->
+
+</body>
+</html>

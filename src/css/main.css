@@ -1,0 +1,30 @@
+body{
+    background-color: #e5e5e5;
+}
+header{
+    border-bottom: 1px solid #d2d6d5 !important;
+
+}
+#page-wrapper {
+    position: inherit;
+    margin: 0 auto;
+    padding: 0 30px;
+    min-height: 550px;
+}
+footer{
+    padding-top: 20px;
+    border-top: 1px solid #d2d6d5 !important;
+}
+/*overridden Styles*/
+.navbar-brand{
+    height:70px;
+    padding: 24px 15px;
+    font-size: 26px;
+    text-shadow: 1px 0px #37FFEF ;
+}
+.navbar-right{
+    padding: 15px;
+}
+#taskList{
+    cursor: pointer;
+}

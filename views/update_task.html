@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Task Management</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/datepicker.css" />
+    <script src="../src/js/jquery.js"></script>
+    <script src="../bootstrap/bootstrap-datepicker.js"></script>
+    <script src="../src/js/lodash.min.js"></script>
+    <script src="../src/js/handlebars.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default startbootstrap-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Task Management</a>
+        </div>
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" >
+                <li class=''><a href="index.html"> Home</a></li>
+                <li><a href="create_task.html"> Create Task </a></li>
+            </ul>
+        </div>
+
+    </div><!-- /.container -->
+</nav>
+<section id="page-wrapper" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center"> Edit Task</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <form id="task" action="">
+                                <div class="form-group">
+                                    <label class="control-label for='summary'"> Summary*</label>
+                                    <input type="text" class="form-control" id="summary" name="summary" placeholder="Enter Task Summary"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label for='priority'">Priority</label>
+                                    <select class="form-control" id="priority" name="priority">
+                                        <option value="selected">Select Priority</option>
+                                        <option value="Major">Major</option>
+                                        <option value="Minor">Minor</option>
+                                        <option value="Critical">Critical</option>
+                                        <option value="Blocker">Blocker</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label for='dueDate'"> Due Date</label>
+                                    <input type="text" class="form-control" id="dueDate" name="dueDate" placeholder="select Due Date"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label for='originalEstimate'"> Original Estimation</label>
+                                    <input type="text" class="form-control" id="originalEstimate" name="originalEstimate"  placeholder="Enter Estimation Time (eg: 2d 3h 37m)"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label for='description'"> Description</label>
+                                    <textarea  class="form-control" id="description" rows="3" name="description" ></textarea>
+                                </div>
+                                <div class="form-group pull-right">
+                                    <button class="btn btn-default" type="button" id="updateBtn">Update</button>
+                                    <!--<button class="btn btn-default" type="button" id="updateBtn">Update</button>-->
+                                    <button class="btn btn-default" type="reset">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--<footer>-->
+<!--<div class="container">-->
+<!--<p class="copyright text-center ">-->
+<!--Copyright &#169; 2014 All Rights Reserved by <strong>Technoidentity.com</strong>-->
+<!--</p>-->
+<!--</div>-->
+<!--</footer>-->
+<script src="../src/js/localstorage.js" ></script>
+<script src="../src/js/update_task.js" ></script>
+</body>
+</html>
